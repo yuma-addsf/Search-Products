@@ -44,7 +44,7 @@
         android:layout_height="wrap_content"
         android:scaleX="1"
         android:scaleY="1"
-        android:text="@string/barcode"
+        android:text="Read the barcode"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
