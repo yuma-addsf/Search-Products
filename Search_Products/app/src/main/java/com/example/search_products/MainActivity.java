@@ -23,8 +23,6 @@ import com.google.zxing.integration.android.IntentResult;
 
 public class MainActivity extends AppCompatActivity {
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,9 +30,20 @@ public class MainActivity extends AppCompatActivity {
 
         
         Button brouse = (Button)findViewById(R.id.brouser);
+        Button barcode = (Button)findViewById(R.id.barcode);
         EditText editText = (EditText)findViewById(R.id.url);
         RadioGroup radioGroup = (RadioGroup) findViewById(R.id.RadioGroup);
 
+        barcode.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                    new IntentIntegrator(MainActivity.this)
+                            .setOrientationLocked(false)
+                            .setDesiredBarcodeFormats(IntentIntegrator.QR_CODE)
+                            .initiateScan();
+            }
+
+        });
 
 
         brouse.setOnClickListener(new View.OnClickListener() {
@@ -89,5 +98,11 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+
     }
+}
+
+class SubActivity extends AppCompatActivity {
+
 }
