@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Search_Products</string>
+    <string name="start">Go</string>
+    <string name="introduce">INPUT JANCode or Product Name</string>
+    <string name="title">Search Products</string>
+    <string name="barcode">Read the barcode</string>
+</resources>
